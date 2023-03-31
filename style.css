@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container__title{
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: rgb(245 245, 245);
+    z-index: 10;
+    position: relative;
+}
+
+.title{
+    font-size: 1.6em;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.Dropdown{
+    cursor: pointer;
+}
+
+.nav__container {
+    display: flex;
+    padding: 20px;
+    z-index: 9;
+    width: 100vw;
+    transform: translateY(-100%);
+    transition: 400ms all;
+    background-color: rgb(245 245, 245);
+    position: absolute;
+}
+
+.mobile__nav{
+    transform: translate(0);
+    transition: 400ms all;
+}
+
+.items__nav{
+    list-style: none;
+}
+
+.items__nav li{
+    height: 40px;
+}
+
+.items__nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.05em;
+    font-weight: 600;
+}
+
+.items__nav a:hover {
+    color: rgb(224, 88, 88);
+    transition: 200ms all;
+}
+
+.hero__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,   
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )  
+    ,url('img/pexels-elena-rubtsova-12301327.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.hero__container h1{
+    color: white;
+    font-size: 2.5em;
+}
+
+.btn_hero {
+    width: 70%;
+    height: 40px;
+
+}
+
