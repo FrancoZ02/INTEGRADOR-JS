@@ -4,11 +4,22 @@ const line1__bars = document.querySelector(".line1__bars-menu");
 const line2__bars = document.querySelector(".line2__bars-menu");
 const line3__bars = document.querySelector(".line3__bars-menu");
 const navLinks = document.querySelector(".items__nav");
+const DOM = document;
 
 const OpensMenu = () => {
     mobileNav.classList.toggle("mobile__nav");
     btn.classList.toggle("Dropdown__open");
     animateBars();
+}
+
+const ScrollDom = () => {
+    if (mobileNav.classList.contains("mobile__nav")) {
+        mobileNav.classList.toggle("mobile__nav");
+        btn.classList.toggle("Dropdown__open");
+        animateBars();
+    }else {
+        return
+    }
 }
 
 function animateBars(){
@@ -29,6 +40,7 @@ const CloseOnClick = (e) => {
 const init = () => {
     btn.addEventListener('click', OpensMenu);
     navLinks.addEventListener('click', CloseOnClick);
+    DOM.addEventListener('scroll', ScrollDom);
 }
 
 init()
