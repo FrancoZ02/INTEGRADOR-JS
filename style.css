@@ -9,13 +9,19 @@
     --second-color: #B1D056;
 }
 
+header{
+    max-width: 100vw;
+    width: 100%;
+}
+
 .container__title{
     height: 10vh;
-    width: 100vw;
+    max-width: 100%;
+    width: 100%;
+    padding: 0px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
     background-color: var(--main-color);
     z-index: 10;
     position: relative;
@@ -36,6 +42,7 @@
     background: transparent;
     gap: 0.65rem;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .Dropdown > div {
@@ -62,9 +69,10 @@
 
 .nav__container {
     display: flex;
-    padding: 20px;
     z-index: 9;
-    width: 100vw;
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
     transform: translateY(-100%);
     transition: 400ms all;
     background-color: var(--main-color);
