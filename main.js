@@ -22,6 +22,7 @@ const OpensMenu = () => {
 
 const CloseMenu = () => {
     mobileNav.classList.remove("visible__nav");
+    overlay.style.display = 'none';
 }
 
 //CERRAR MENU DESPLEGABLE CLICKEANDO EN LOS LINKS
@@ -63,6 +64,7 @@ const OpenCart = () => {
 
 const CloseCart = () => {
     cartContainer.classList.remove('visible__cart');
+    overlay.style.display = 'none';
 }
 
 const init = () => {
