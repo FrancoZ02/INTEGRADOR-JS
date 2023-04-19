@@ -5,262 +5,141 @@
 }
 
 :root{
-    --main-color: #f5f5f5;
-    --second-color: #B1D056;
-}
-
-header{
-    max-width: 100vw;
-    width: 100%;
+    --black: black;
+    --white: white;
 }
 
 .container__title{
-    height: 10vh;
-    width: 100%;
-    padding: 0px 10px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: var(--main-color);
-    z-index: 10;
-    position: relative;
+    justify-content: space-between;
+    border-bottom: 2px solid #F4F5F7;
 }
 
 .title{
-    font-size: 1.6em;
-    font-weight: 800;
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 1.4em;
+    font-weight: 400;
+    font-style: oblique;
+}
+
+.dropdown{
+    border: none;
+    background-color: var(--white);
+    margin: 5px 0 0 15px;
     cursor: pointer;
 }
 
-.Dropdown{
-    display: flex;
-    flex-direction: column;
-    width: 3rem;
-    height: 3rem;
-    border: 0;
-    background: transparent;
-    gap: 0.65rem;
-    margin-right: 10px;
-    cursor: pointer;
+.dropdown img{
+    width: 35px;
+    height: 35px;
 }
 
-.Dropdown > div {
-    background: black;
-    height: 2px;
-    width: 100%;
-    border-radius: 5px;
-    margin-top: 6px;
-    transition: all 0.5s;
-    transform-origin: 0px 100%;
-}
-
-.activeline1__bars-menu{
-    transform: rotate(45deg) translate(-1px, 8px);
-}
-
-.activeline2__bars-menu{
-    opacity: 0;
-}
-
-.activeline3__bars-menu{
-    transform: rotate(-45deg) translate(-5px, -2px);
-}
-
-.nav__container {
-    display: flex;
-    z-index: 9;
-    max-width: 100%;
-    width: 100%;
-    padding: 20px;
-    transform: translateY(-100%);
-    transition: 400ms all;
-    background-color: var(--main-color);
+.nav__container{
+    height: 110vh;
+    width: 90vw;
     position: absolute;
+    top: 0;
+    transform: translate(-100%);
+    background-color: var(--white);
+    border-right: 2px solid black;
+    transition: .5s;
 }
 
-.mobile__nav{
+.visible__nav{
     transform: translate(0);
-    transition: 400ms all;
 }
 
-.items__nav{
+.list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 0 25px;
+}
+
+.list__item{
     list-style: none;
-}
-
-.items__nav li{
-    height: 40px;
     width: 100%;
-}
-
-.items__nav a {
-    color: black;
-    text-decoration: none;
-    font-size: 1.05em;
-    font-weight: 600;
-    width: 100%;
-    transition: 300ms all;
-}
-
-.items__nav a:hover {
-    color: var(--second-color);
-    transition: 300ms all;
-}
-
-.hero__container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 90vh;
-    background-image: linear-gradient(
-        0deg,   
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )  
-    ,url('img/Shoe-Hero.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.hero__container h1{
-    color: var(--main-color);
-    font-size: 2.5em;
-}
-
-.btn_hero {
-    width: 70%;
-    height: 40px;
+    overflow: hidden;
     font-size: 1.2em;
-    font-weight: 600;
-    background-color: var(--main-color);
-    border: none;
-    border-radius: 20px;
-    word-spacing: 15px;
-    transition: 500ms all;
-    margin-top: 150px;
+    font-weight: 500;
+}
+
+.arrow .list__arrow{
+    transform: rotate(0deg);
+}
+
+.list__item--click{
     cursor: pointer;
 }
 
-.btn_hero:hover{
-    word-spacing: 25px;
-    transform: scale(1.05);
-    transition: 500ms all;
-    background-color: var(--second-color);
-}
-
-#section__galery{
-    max-width: 100vw;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--main-color);
-}
-
-#section__galery h1 {
-    text-align: center;
-    padding: 20px 0px;
-}
-
-.galery {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-    width: 100%;
-    height: 90%;
-}
-
-.galery div{
+.list__button{
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    transition: .5s ease;
-    gap: 60px;
+    gap: 1rem;
+    width: 100%;
+    margin: 0;
+    justify-content: space-between;
 }
 
-.galery div:hover{
-    cursor: crosshair;
-    height: 40%;
-    opacity: 1;
-    filter: contrast(120%);
-}
-
-.galery div:hover h1{
-    display: block;
-}
-
-.galery div:hover button{
-    display: block;
-}
-
-.galery div h1 {
-    color: var(--main-color);
-    display: none;
-    transition: 0.5s ease;
-}
-
-
-
-.galery div button {
-    padding:  7px 30px;
-    font-size: 0.8em;
-    font-weight: 600;
-    background-color: var(--main-color);
-    border: none;
-    border-radius: 20px;
-    word-spacing: 15px;
-    transition: 500ms all;
+.list__arrow{
+    margin-right: 25px;
+    transform: rotate(-90deg);
     cursor: pointer;
-    display: none;
-    transition: 0.5s ease;
+    transition: transform .3s;
 }
 
-.galery div button:hover {
-    word-spacing: 25px;
-    transform: scale(1.05);
-    transition: 500ms all;
-    background-color: var(--second-color);
+.nav__link{
+    color: #303440;
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
 }
 
-.img__container1{
-    background-image: linear-gradient(
-        0deg,   
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url('img/adidas.jpg');
+.list__show{
+    width: 80%;
+    padding-left: 35px;
+    margin-left: 15px;
+    border-left: 2px solid #303440;
+    list-style: none;
+    transition: height .4s;
+    height: 0;
 }
 
-.img__container2{
-    background-image: linear-gradient(
-        0deg,   
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ) 
-    ,url('img/nikes.jpg');
+.nav__link--inside{
+    border-radius: 6px;
+    padding-left: 20px;
 }
 
-.img__container3{
-    background-image: linear-gradient(
-        0deg,   
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url('img/reebok.jpg');
+.nav__link--inside:hover{
+    background-color: #f6f8fA;
 }
 
-.img__container4{
-    background-image: linear-gradient(
-        0deg,   
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url('img/vans.jpg');
+.container_closemenu{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    border-bottom: 2px solid #F4F5F7;
+}
+
+.close__menu{
+    width: 25px;
+    margin: 15px 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.icons{
+    width: 35px;
+    height: 35px;
+    margin: 5px 15px 0 0;
+    cursor: pointer;
+}
+
+.container__hero{
+    height: 1000vh;
 }

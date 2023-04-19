@@ -1,34 +1,18 @@
-const btn = document.querySelector(".Dropdown")
-const mobileNav = document.querySelector(".nav__container")
-const line1__bars = document.querySelector(".line1__bars-menu");
-const line2__bars = document.querySelector(".line2__bars-menu");
-const line3__bars = document.querySelector(".line3__bars-menu");
+import { shoes } from "./secondary.js";
+const btn = document.querySelector(".dropdown");
+const mobileNav = document.querySelector(".nav__container");
 const navLinks = document.querySelector(".items__nav");
+const CloseMenuBtn = document.querySelector(".close__menu")
 const DOM = document;
+const listElements = document.querySelectorAll(".list__button--click");
 
 // ABRIR O CERRAR MENU DESPLEGABLE EN MOBILE
 const OpensMenu = () => {
-    mobileNav.classList.toggle("mobile__nav");
-    btn.classList.toggle("Dropdown__open");
-    animateBars();
+    mobileNav.classList.add("visible__nav");
 }
 
-// CERRAR MENU DESPLEGABLE AL HACER SCROLL
-const ScrollDom = () => {
-    if (mobileNav.classList.contains("mobile__nav")) {
-        mobileNav.classList.toggle("mobile__nav");
-        btn.classList.toggle("Dropdown__open");
-        animateBars();
-    }else {
-        return
-    }
-}
-
-// ANIMACION DEL BOTON DEL MENU DESPLEGABLE
-function animateBars(){
-    line1__bars.classList.toggle("activeline1__bars-menu");
-    line2__bars.classList.toggle("activeline2__bars-menu");
-    line3__bars.classList.toggle("activeline3__bars-menu");
+const CloseMenu = () => {
+    mobileNav.classList.remove("visible__nav");
 }
 
 //CERRAR MENU DESPLEGABLE CLICKEANDO EN LOS LINKS
@@ -36,15 +20,30 @@ const CloseOnClick = (e) => {
     if (e.target.classList.contains('.nav__links')) {
         return;
     }
-    mobileNav.classList.remove("mobile__nav");
-    btn.classList.remove("Dropdown__open");
-    animateBars();
+    mobileNav.classList.remove("visible__nav");
 }
+
+listElements.forEach(listElement => {
+    listElement.addEventListener("click", () => {
+        listElement.classList.toggle("arrow");
+
+        let height = 0;
+        let menu = listElement.nextElementSibling;
+        if(menu.clientHeight == "0"){
+            height=menu.scrollHeight;
+        }
+
+        menu.style.height = `${height}px`;
+    })
+});
 
 const init = () => {
     btn.addEventListener('click', OpensMenu);
+    CloseMenuBtn.addEventListener('click', CloseMenu);
     navLinks.addEventListener('click', CloseOnClick);
     DOM.addEventListener('scroll', ScrollDom);
 }
 
 init()
+
+hola()

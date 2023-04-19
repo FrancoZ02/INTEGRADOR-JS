@@ -14,58 +14,76 @@
     
 <header>
     <div class="container__title">
+        <button class="dropdown"><img src="img/menu.svg" alt="Menu Hamburguesa"></button>
         <p class="title">Shopper</p>
-        <button class="Dropdown">
-            <div class="line1__bars-menu"></div>
-            <div class="line2__bars-menu"></div>
-            <div class="line3__bars-menu"></div>
-        </button>
+        <div class="SAC__container">
+            <span><img src="img/buscar.svg" alt="search" class="icons search"></span>
+            <span><img src="img/cart.png" alt="cart" class="icons cart"></span>
+        </div>
+        
     </div>
     <nav>
         <div class="nav__container">
-            <ul class="items__nav">
-                <li><a class="nav__links" href="#">Home</a></li>
-                <li><a class="nav__links" href="#">Catalog</a></li>
-                <li><a class="nav__links" href="#">Shop</a></li>
-                <li><a class="nav__links" href="#">Carrito</a></li>
+            <div class="container_closemenu"><img src="img/close.png" class="close__menu" alt=""></div>
+            <ul class="list">
+
+                <li class="list__item">
+                    <a href="#" class="nav__link">Inicio</a>
+                </li>
+
+                <li class="list__item">
+                    <div class="list__button list__button--click">
+                        <p class="nav__link">Categorias<p>
+                    <img src="img/arrow.png" class="list__arrow" alt="">
+                    </div>
+
+                    <ul class="list__show">
+                        <li class="Men list__inside">
+                            <a class="nav__link nav__link--inside" href="#">Hombre</a>
+                        </li>
+                        <li class="Women list__inside">
+                            <a class="nav__link nav__link--inside" href="#">Mujer</a>
+                        </li>
+                        <li class="Unisex list__inside">
+                            <a class="nav__link nav__link--inside" href="#">Unisex</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="list__item">
+                    <div class="list__button list__button--click">
+                        <p class="nav__link">Marcas</p>
+                        <img src="img/arrow.png" class="list__arrow" alt="">
+                    </div>
+
+                    <ul class="list__show">
+                        <li class="Nike list__inside">
+                            <a class="nav__link nav__link--inside" href="#">Nike</a>
+                        </li>
+                        <li class="Adidas list__inside">
+                            <a class="nav__link nav__link--inside" href="#">Adidas</a>
+                        </li>
+                        <li class="Pumas list__inside">
+                            <a class="nav__link nav__link--inside" href="#">Pumas</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="list__item">
+                    <a href="#" class="nav__link">Contacto</a>
+                </li>
             </ul>
         </div>
     </nav>
+
+    <section id="Hero">
+        <div class="container__hero"></div>
+    </section>
 </header>
 
-<section>
-    <div class="hero__container">
-        <div class="hero_img">
-            <h1>lorem impsum</h1>
-            <button class="btn_hero">Shop <span class="arrow">→</span></button>
-        </div>
-    </div>
-</section>
 
-<section id="section__galery">
-    <h1>Cual es tu estilo</h1>
-    <div class="galery">
-        <div class="img__container1">
-            <h1>Adidas</h1>
-            <button>Shop</button>
-        </div>
-        <div class="img__container2">
-            <h1>nike</h1>
-            <button>Shop</button>
-        </div>
-        <div class="img__container3">
-            <h1>Reebok</h1>
-            <button>Shop</button>
-        </div>
-        <div class="img__container4">
-            <h1>Vans</h1>
-            <button>Shop</button>
-        </div>
-    </div>    
-</section>
-
-<section></section>
-
-<script src="main.js"></script>
+<script src="main.js" type="module"></script>
+<script src="secondary.js" type="module"></script>
 </body>
+
 </html>
