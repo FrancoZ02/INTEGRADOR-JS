@@ -151,7 +151,7 @@
 
 .hero__img{
     width: 93%;
-    height: 93%;
+    height: 88%;
     background-image: url("img/hero.jpg");
     background-position: center center;
     background-size: cover;
@@ -205,9 +205,10 @@
 }
 
 #about__us .container h3{
-    font-size: 1.1em;
+    font-size: 1em;
     letter-spacing: 1px;
     padding-bottom: 13px;
+    font-weight: 400;
 }
 
 #about__us h1{
