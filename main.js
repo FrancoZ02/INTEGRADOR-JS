@@ -13,7 +13,7 @@ const listElements = document.querySelectorAll(".list__button--click");
 // ABRIR O CERRAR MENU DESPLEGABLE EN MOBILE
 const OpensMenu = () => {
     mobileNav.classList.add("visible__nav");
-    12
+    overlay.style.display = 'block';
     if (cartContainer.classList.contains('visible__cart')) {
         cartContainer.classList.remove("visible__cart");
     }
