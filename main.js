@@ -13,7 +13,7 @@ const listElements = document.querySelectorAll(".list__button--click");
 // ABRIR O CERRAR MENU DESPLEGABLE EN MOBILE
 const OpensMenu = () => {
     mobileNav.classList.add("visible__nav");
-    overlay.style.display = 'block';
+    12
     if (cartContainer.classList.contains('visible__cart')) {
         cartContainer.classList.remove("visible__cart");
     }
@@ -22,7 +22,7 @@ const OpensMenu = () => {
 
 const CloseMenu = () => {
     mobileNav.classList.remove("visible__nav");
-    overlay.style.display = 'none';
+    overlayOut();
 }
 
 //CERRAR MENU DESPLEGABLE CLICKEANDO EN LOS LINKS
@@ -47,8 +47,12 @@ listElements.forEach(listElement => {
     })
 });
 
-const closeOverlay = () => {
+const overlayOut = () => {
     overlay.style.display= 'none';
+}
+
+const closeOverlay = () => {
+    overlayOut();
     CloseMenu();
     CloseCart();
 }
