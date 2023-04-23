@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: Futura;
+    src: url('futura/Futura-Bold.ttf');
+}
+
+body{
+    font-family: futura;
+}
+
 :root{
     --black: black;
     --white: white;
@@ -30,12 +39,10 @@
     background-color: white;
 }
 
-.title{
-    margin-right: 15px;
-    cursor: pointer;
-    font-size: 1.4em;
-    font-weight: 400;
-    font-style: oblique;
+.Logo{
+    width: 65px;
+    margin-top: 5px;
+    margin-left: 50%;
 }
 
 .dropdown{
@@ -195,29 +202,25 @@
 
 #hero{
     max-width: 100vw;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction: column;
 }
 
 .hero__img{
     width: 93%;
-    height: 88%;
-    background-image: url("img/hero.jpg");
+    height: 100%;
+    background-image: url("img/hero.webp");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: auto;
+    margin: 20px;
 }
 
 .ad{
-    height: 10vh;
+    height: 13vh;
     width: 100%;
-    background-image: linear-gradient(
-        rgba(0,0,0,0.4),
-        rgba(0,0,0,0.4)
-    ) 
-    ,url("img/ad.jpg");
+    background-image:url("img/nike.gif");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -288,4 +291,75 @@
 
 .btn:hover{
     opacity: 0.85;
+}
+
+#latest__releases{
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+}
+
+#latest__releases .cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 60vh;
+    width: 93%;
+    margin: 3px auto;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#latest__releases .card1{
+    background-image: url("img/GenerationPack.webp");
+}
+
+#latest__releases .card2{
+    background-image: url("img/Jordan.webp");
+    color: white;
+}
+
+#latest__releases .cards .btn{
+    width: 120px;
+    margin: 0 0 20px 10px;
+}
+
+#latest__releases .card2 .btn{
+    background-color: #fff;
+    color: #111;
+}
+
+#latest__releases .cards p{
+    margin: 0 0 10px 14px;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.slider{
+    overflow: hidden;
+}
+
+.slider__inner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.slider__inner .card{
+    width: 500px;
+    height: 90%;
+    margin-left: 15px;
+}
+
+.slider__inner .card .card-img{
+    width: 100%;
+    height: 50%;
+}
+
+.card-img img{
+    width: 100%;
+    object-fit: contain;
 }
